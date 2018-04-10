@@ -151,15 +151,6 @@
                 android:value=".ui.FaceVerificationActivity" />
         </activity>
         <activity
-            android:name=".log.FindSimilarFaceLogActivity"
-            android:label="@string/find_similar_face_log"
-            android:parentActivityName=".ui.FindSimilarFaceActivity"
-            android:screenOrientation="portrait" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ui.FindSimilarFaceActivity" />
-        </activity>
-        <activity
             android:name=".log.GroupingLogActivity"
             android:label="@string/grouping_log"
             android:parentActivityName=".ui.GroupingActivity"

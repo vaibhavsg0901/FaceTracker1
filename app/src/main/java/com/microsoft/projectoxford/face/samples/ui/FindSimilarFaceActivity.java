@@ -54,8 +54,6 @@ import android.widget.TextView;
 import com.microsoft.projectoxford.face.FaceServiceClient;
 import com.microsoft.projectoxford.face.contract.AddPersistedFaceResult;
 import com.microsoft.projectoxford.face.contract.Face;
-import com.microsoft.projectoxford.face.contract.FaceRectangle;
-import com.microsoft.projectoxford.face.contract.SimilarFace;
 import com.microsoft.projectoxford.face.contract.SimilarPersistedFace;
 import com.microsoft.projectoxford.face.samples.R;
 import com.microsoft.projectoxford.face.samples.helper.ImageHelper;
@@ -657,7 +655,8 @@ public class FindSimilarFaceActivity extends AppCompatActivity {
     }
 
     public void viewLog(View view) {
-        Intent intent = new Intent(this, FindSimilarFaceLogActivity.class);
+          Intent intent;
+        intent = new Intent(this, FindSimilarFaceLogActivity.class);
         startActivity(intent);
     }
 

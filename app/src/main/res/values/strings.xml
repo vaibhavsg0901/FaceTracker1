@@ -18,14 +18,14 @@
     <string name="identification">Identification</string>
     <string name="grouping">Grouping</string>
     <string name="find_similar_faces">Find Similar Faces</string>
-    <string name="detection_description">Detect faces, face landmarks, pose, smile, glasses, gender, and age.</string>
+    <string name="detection_description">Detect faces, smile, glasses, gender, age etc.</string>
     <string name="verification_description">Authentication between two faces or between a face and a person.</string>
     <string name="grouping_description">Group faces based on similarity.</string>
     <string name="find_similar_face_description">Search for similar-looking faces.</string>
     <string name="identification_description">Identify the person from a face.</string>
 
     <!-- Tips to get subscription key shown on main activity-->
-    <string name="app_name">Microsoft Cognitive Services Face</string>
+    <string name="app_name">Face Tracker</string>
     <string name="add_subscription_key_tip_title">Subscription Key is Needed</string>
     <string name="add_subscription_key_tip">Please put your subscription key with its corresponding endpoint to source file \"app/res/values/strings.xml\" to enable Face API calls.</string>
 
