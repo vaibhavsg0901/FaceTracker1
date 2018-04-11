@@ -1,5 +1,3 @@
-<!-- Copyright (c) Microsoft. All rights reserved. -->
-
 <resources>
     <!-- Please refer to https://azure.microsoft.com/en-us/services/cognitive-services/face/ to get your subscription key -->
     <!-- If you have subscription key with its corresponding endpoint, you can add them here to use the service -->
@@ -81,7 +79,7 @@
     <string name="target_face">Target face:</string>
     <string name="all_faces">All Faces:</string>
     <string name="add_faces">Add\nFaces</string>
-    <string name="similar_person_description">Finding matchPerson people...</string>
+    <string name="similar_person_description">Finding matchPerson people…</string>
     <string name="similar_face_description">Finding matchFace faces...</string>
 
     <!-- Common in all activities -->

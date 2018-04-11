@@ -59,6 +59,7 @@ public class FindSimilarFaceLogActivity extends AppCompatActivity {
         listView.setAdapter(logAdapter);
     }
 
+
     // The adapter of the ListView which contains the find similar face log.
     private class LogAdapter extends BaseAdapter {
         // The find similar face log.
