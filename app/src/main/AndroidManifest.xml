@@ -17,10 +17,19 @@
             android:label="@string/app_name"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name=".ui.SplashActivity"
+            android:label="Authenticate">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".ui.CreatePassword"
+            android:label="CreatePassword">
+        </activity>
+        <activity android:name=".ui.EnterPassword"
+            android:label="EnterPassword">
         </activity>
         <activity
             android:name=".ui.DetectionActivity"
@@ -177,6 +186,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.IdentificationActivity" />
         </activity>
+
     </application>
 
 </manifest>
