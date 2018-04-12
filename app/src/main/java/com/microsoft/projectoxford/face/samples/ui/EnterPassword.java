@@ -18,7 +18,7 @@ import com.microsoft.projectoxford.face.samples.R;
 public class EnterPassword extends AppCompatActivity {
 
     EditText editText;
-    Button button;
+    Button button, resetButton;
     String password;
 
     @Override
@@ -46,6 +46,16 @@ public class EnterPassword extends AppCompatActivity {
                 }
                 else
                     Toast.makeText(EnterPassword.this, "Wrong password!", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        resetButton = (Button)findViewById(R.id.resetButton);
+        resetButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ResetPassword.class);
+                startActivity(intent);
+                finish();
             }
         });
     }

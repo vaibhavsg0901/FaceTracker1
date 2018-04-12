@@ -29,7 +29,10 @@
             android:label="CreatePassword">
         </activity>
         <activity android:name=".ui.EnterPassword"
-            android:label="EnterPassword">
+            android:label="Enter Password">
+        </activity>
+        <activity android:name=".ui.ResetPassword"
+            android:label="Reset Password">
         </activity>
         <activity
             android:name=".ui.DetectionActivity"
