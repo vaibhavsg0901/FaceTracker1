@@ -72,6 +72,8 @@ import java.util.UUID;
 
 
 import com.microsoft.projectoxford.face.samples.R;
+import com.microsoft.projectoxford.face.samples.log.VerificationLogActivity;
+
 public class FaceVerificationActivity extends AppCompatActivity {
     // Background task for face verification.
     private class VerificationTask extends AsyncTask<Void, String, VerifyResult> {
@@ -299,7 +301,7 @@ public class FaceVerificationActivity extends AppCompatActivity {
 
     // View the log of service calls.
     public void viewLog(View view) {
-        Intent intent = new Intent(this, VerificationMenuActivity.class);
+        Intent intent = new Intent(this, VerificationLogActivity.class);
         startActivity(intent);
     }
 

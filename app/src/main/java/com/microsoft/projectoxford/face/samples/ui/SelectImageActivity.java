@@ -93,11 +93,11 @@ public class SelectImageActivity extends AppCompatActivity {
                 if (resultCode == RESULT_OK) {
                     Uri imageUri;
                     if (data == null || data.getData() == null) {
-                        Toast.makeText(SelectImageActivity.this,"INside req1"+mUriPhotoTaken, Toast.LENGTH_LONG).show();
+                        //Toast.makeText(SelectImageActivity.this,"INside req1"+mUriPhotoTaken, Toast.LENGTH_LONG).show();
 
                         imageUri = mUriPhotoTaken;
                     } else {
-                        Toast.makeText(SelectImageActivity.this,"INside req2"+data, Toast.LENGTH_LONG).show();
+                        //Toast.makeText(SelectImageActivity.this,"INside req2"+data, Toast.LENGTH_LONG).show();
 
                         imageUri = data.getData();
                     }
@@ -118,7 +118,7 @@ public class SelectImageActivity extends AppCompatActivity {
         if(intent.resolveActivity(getPackageManager()) != null) {
             // Save the photo taken to a temporary file.
             File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
-            Toast.makeText(SelectImageActivity.this,"storagedir is"+storageDir, Toast.LENGTH_LONG).show();
+           // Toast.makeText(SelectImageActivity.this,"storagedir is"+storageDir, Toast.LENGTH_LONG).show();
             try {
                 File file = File.createTempFile("IMG_", ".jpg", storageDir);
                 mUriPhotoTaken = Uri.fromFile(file);
