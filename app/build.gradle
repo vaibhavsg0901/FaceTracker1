@@ -23,7 +23,7 @@ dependencies {
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     testImplementation 'junit:junit:4.12'
-    implementation 'com.android.support:appcompat-v7:22.2.1'
+    implementation 'com.android.support:appcompat-v7:23.0.0'
     implementation 'com.android.support:design:22.2.1'
     implementation 'com.android.support:multidex:1.0.3'
     // Use the following line to include client library for Face API from Maven Central Repository
