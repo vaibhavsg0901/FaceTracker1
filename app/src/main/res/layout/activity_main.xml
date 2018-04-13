@@ -1,4 +1,4 @@
-<!-- Copyright (c) Microsoft. All rights reserved. -->
+
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
@@ -8,40 +8,6 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:orientation="vertical"
     tools:context=".ui.MainActivity">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal"
-        android:layout_marginBottom="@dimen/view_margin" >
-
-        <ScrollView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent" >
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:gravity="center_vertical"
-                android:text="@string/detection_description" />
-
-        </ScrollView>
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/detection"
-            android:layout_weight="1"
-            android:layout_marginLeft="@dimen/view_margin"
-            android:layout_marginStart="@dimen/view_margin"
-            android:onClick="detection"
-            style="@style/ButtonStyle" />
-
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -94,39 +60,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:gravity="center_vertical"
-                android:text="@string/grouping_description" />
-        </ScrollView>
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/grouping"
-            android:layout_weight="1"
-            android:layout_marginLeft="@dimen/view_margin"
-            android:layout_marginStart="@dimen/view_margin"
-            android:onClick="grouping"
-            style="@style/ButtonStyle" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal" >
-
-        <ScrollView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent" >
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:gravity="center_vertical"
-                android:text="@string/find_similar_face_description" />
+                android:text="@string/identification_description" />
 
         </ScrollView>
 
@@ -134,14 +68,15 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/find_similar_faces"
+            android:text="@string/identification"
             android:layout_weight="1"
             android:layout_marginLeft="@dimen/view_margin"
             android:layout_marginStart="@dimen/view_margin"
-            android:onClick="findSimilarFace"
+            android:onClick="identification"
             style="@style/ButtonStyle" />
 
     </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -160,7 +95,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:gravity="center_vertical"
-                android:text="@string/identification_description" />
+                android:text="@string/detection_description" />
 
         </ScrollView>
 
@@ -168,18 +103,47 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/identification"
+            android:text="@string/detection"
             android:layout_weight="1"
             android:layout_marginLeft="@dimen/view_margin"
             android:layout_marginStart="@dimen/view_margin"
-            android:onClick="identification"
+            android:onClick="detection"
             style="@style/ButtonStyle" />
 
     </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Microsoft will receive the images you upload and may use them to improve Face API and related services. By submitting an image, you confirm that you have consent from everyone in it."/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/view_margin" >
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="@string/grouping_description" />
+        </ScrollView>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/grouping"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/view_margin"
+            android:layout_marginStart="@dimen/view_margin"
+            android:onClick="grouping"
+            style="@style/ButtonStyle" />
+
+    </LinearLayout>
+
 </LinearLayout>

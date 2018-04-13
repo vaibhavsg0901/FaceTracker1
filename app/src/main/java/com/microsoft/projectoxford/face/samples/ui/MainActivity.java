@@ -70,10 +70,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void findSimilarFace(View view) {
+    /*public void findSimilarFace(View view) {
         Intent intent = new Intent(this, FindSimilarFaceActivity.class);
         startActivity(intent);
-    }
+    }*/
 
     public void identification(View view) {
         Intent intent = new Intent(this, IdentificationActivity.class);

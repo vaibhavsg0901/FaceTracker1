@@ -1,5 +1,3 @@
-<!-- Copyright (c) Microsoft. All rights reserved. -->
-
 <resources>
     <!-- Please refer to https://azure.microsoft.com/en-us/services/cognitive-services/face/ to get your subscription key -->
     <!-- If you have subscription key with its corresponding endpoint, you can add them here to use the service -->
@@ -18,14 +16,14 @@
     <string name="identification">Identification</string>
     <string name="grouping">Grouping</string>
     <string name="find_similar_faces">Find Similar Faces</string>
-    <string name="detection_description">Detect faces, face landmarks, pose, smile, glasses, gender, and age.</string>
+    <string name="detection_description">Detect faces, smile, glasses, gender, age etc.</string>
     <string name="verification_description">Authentication between two faces or between a face and a person.</string>
     <string name="grouping_description">Group faces based on similarity.</string>
     <string name="find_similar_face_description">Search for similar-looking faces.</string>
     <string name="identification_description">Identify the person from a face.</string>
 
     <!-- Tips to get subscription key shown on main activity-->
-    <string name="app_name">Microsoft Cognitive Services Face</string>
+    <string name="app_name">Face Tracker</string>
     <string name="add_subscription_key_tip_title">Subscription Key is Needed</string>
     <string name="add_subscription_key_tip">Please put your subscription key with its corresponding endpoint to source file \"app/res/values/strings.xml\" to enable Face API calls.</string>
 
@@ -48,7 +46,7 @@
 
     <!-- Identification activity -->
     <string name="identify">Identify</string>
-    <string name="manage_person_groups">Manage\nPerson\nGroups</string>
+    <string name="manage_person_groups">Manage\nGroups</string>
     <string name="person_groups">Person Groups</string>
     <string name="target_image">Target image</string>
     <string name="faces">Faces in image</string>
@@ -58,12 +56,12 @@
     <string name="done_and_save">Save</string>
 
     <string name="person_group_list">Person Group List</string>
-    <string name="person_group_list_tip">- Tap on a group to edit.\n- Long tap to delete.</string>
-    <string name="add_person_group">Add Person Group</string>
+    <string name="person_group_list_tip">- Tap to edit.\n- Long tap to delete.</string>
+    <string name="add_person_group">Add New Group</string>
 
-    <string name="person_group">Person Group</string>
-    <string name="person_group_tip">- Tap on a person to edit.\n- Long press to delete.</string>
-    <string name="person_group_name">Person group name:</string>
+    <string name="person_group">Group</string>
+    <string name="person_group_tip">- Tap to edit.\n- Long tap to delete.</string>
+    <string name="person_group_name">Group name:</string>
     <string name="type_in_person_group_name_tip">Name (within 30 characters)</string>
     <string name="add_person">Add Person</string>
 
@@ -74,14 +72,14 @@
     <string name="add_face">Add Face</string>
     <string name="person_name">Person name:</string>
     <string name="add_face_to_person">Add Faces To Person</string>
-    <string name="select_face_tip">Select this person\'s faces (if exist) by click on the checkbox.</string>
+    <string name="select_face_tip">Select this person\'s faces by click on the checkbox.</string>
 
     <!-- Find similar faces and grouping activity -->
     <string name="zero_face">Face list: 0 faces in total</string>
     <string name="target_face">Target face:</string>
     <string name="all_faces">All Faces:</string>
     <string name="add_faces">Add\nFaces</string>
-    <string name="similar_person_description">Finding matchPerson people...</string>
+    <string name="similar_person_description">Finding matchPerson people…</string>
     <string name="similar_face_description">Finding matchFace faces...</string>
 
     <!-- Common in all activities -->
@@ -91,7 +89,7 @@
     <!-- Select image activity -->
     <string name="select_an_image">Select an Image</string>
     <string name="take_photo">Take a Photo</string>
-    <string name="select_image_in_album">From Gallery</string>
+    <string name="select_image_in_album">Select From Gallery</string>
 
     <!-- Logs -->
     <string name="log">Log:</string>
@@ -108,7 +106,7 @@
     <string name="face_cannot_be_identified">Unknown person</string>
     <string name="user_provided_person_name">Person name</string>
     <string name="user_provided_description_data">User data</string>
-    <string name="user_provided_person_group_name">Person group name</string>
+    <string name="user_provided_person_group_name">Group name</string>
     <string name="user_provided_person_group_description_data">User data</string>
 
 </resources>
