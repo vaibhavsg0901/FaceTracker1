@@ -8,6 +8,7 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
@@ -29,15 +30,21 @@ public class SplashActivity extends AppCompatActivity  {
         setContentView(R.layout.activity_splash);
 
         //Camera Permissions
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
-                == PackageManager.PERMISSION_GRANTED) {
-            // Permission is already available, start camera preview
-        } else {
-            // Permission is missing and must be requested.
-            requestCameraPermission();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
+                != PackageManager.PERMISSION_GRANTED) {
+            // Permission is not already available
+            if(ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CAMERA)) {
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.INTERNET}, SplashActivity.PERMISSION_REQUEST_CAMERA);
+            }else {
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.INTERNET}, SplashActivity.PERMISSION_REQUEST_CAMERA);
+            }
         }
-
-        //load the password
+        else {
+            //select right scren for loading
+            loadAppropriateScreen();
+        }
+    }
+    public void loadAppropriateScreen() {
         SharedPreferences settings = getSharedPreferences("PREFS", 0);
         password = settings.getString("password", "");
 
@@ -60,38 +67,23 @@ public class SplashActivity extends AppCompatActivity  {
             }
         }, 2000);
     }
-
     //Camera Permissions
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
                                            @NonNull int[] grantResults) {
         // BEGIN_INCLUDE(onRequestPermissionsResult)
-        if (requestCode == PERMISSION_REQUEST_CAMERA) {
-            // Request for camera permission.
-            if (grantResults.length == 1 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                // Permission has been granted. Start camera preview Activity.
+        switch(requestCode) {
+            case SplashActivity.PERMISSION_REQUEST_CAMERA: {
+                if(grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    Toast.makeText(this, "Camera Permission Granted!", Toast.LENGTH_SHORT).show();
+                    loadAppropriateScreen();
+                }
+                else {
+                    Toast.makeText(this, "Camera Permission Denied!", Toast.LENGTH_SHORT).show();
+                    finish();
+                }
             }
         }
-        else {
-            Toast.makeText(SplashActivity.this, "Permissions denied", Toast.LENGTH_SHORT).show();
-            finish();
-        }
-        // END_INCLUDE(onRequestPermissionsResult)
     }
-    private void requestCameraPermission() {
-        // Permission has not been granted and must be requested.
-        if (ActivityCompat.shouldShowRequestPermissionRationale(this,
-                Manifest.permission.CAMERA)) {
-            // Provide an additional rationale to the user if the permission was not granted
-            // and the user would benefit from additional context for the use of the permission.
-            // Display a SnackBar with cda button to request the missing permission.
-
-        } else {
-            // Request the permission. The result will be received in onRequestPermissionResult().
-            ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.CAMERA}, PERMISSION_REQUEST_CAMERA);
-        }
-    }
-
 }
 
